@@ -157,21 +157,6 @@ Rectangle {
           width: parent.width
           wrapMode: Text.WrapAtWordBoundaryOrAnywhere
 
-          MouseArea {
-            id: bodMArea
-
-            acceptedButtons: Qt.LeftButton
-            anchors.fill: parent
-
-            // thanks end_4 for this <3
-            onClicked: {
-              const hovLink = bodText.hoveredLink;
-              if (hovLink == "") {
-                return;
-              }
-              Hyprland.dispatch("exec xdg-open " + hovLink);
-            }
-          }
         }
       }
 
